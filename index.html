@@ -1,32 +1,42 @@
- <!DOCTYPE html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-  <div class="stopwatch">
-    <div class="title">
-      <i class="fa-solid fa-stopwatch"></i>
-    </div>
-    <div class="subtitle">smart Icon toggle(play/pause)</div>
-    <div class="time" id="display">00:00:00</div>
-    <div class="buttons">
-      <button class="star" id="toggleBtn">
-        <i class="fa-solid fa-play" id="toggleIcon" onclick="toggletimer()"></i>
-        <span id="toggleText">star</span>
-      </button>
-      <button class="stop" onclick="stoptimer()">
-          <i class="fa-solid fa-stop"></i>  stop
-      </button>
-      <button class="reset" onclick="resetTimer()">
-        <i class="fa-solid fa-rotate-right"></i> reset
-      </button>
-    </div>
-  </div>
+    <form action="" class="login-form">
+        <h1 class="login-title"> Đăng Nhập</h1>
+
+        <div class="input-box">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" placeholder="Tên đăng nhập">
+        </div>
+         <div class="input-box">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Mật khẩu">
+        </div>
+
+        <div class="remember-forgot-box">
+            <label for="remember">
+                <input type="checkbox" id="remember">
+                Ghi nhớ tài khoản
+            </label>
+            <a href="#"> Quên mật khẩu</a>
+        </div>
+
+        <button class="login-btn">login</button>
+        <p class="register">
+            khônh tìm thấy tài khoản 
+            <a href="#">đăng kí?</a>
+        </p>
+    </form>
+
+    <script src="script.js"></script>
+    
 </body>
-<script src="index.js"></script>
+</body>
 </html>
