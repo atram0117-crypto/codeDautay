@@ -3,40 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form login</title>
+    <title>Digital clock [Html Css Js]</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <form action="" class="login-form">
-        <h1 class="login-title"> Đăng Nhập</h1>
-
-        <div class="input-box">
-            <i class="fa-regular fa-user"></i>
-            <input type="text" placeholder="Tên đăng nhập">
+<div class="hero">
+    <div class="container">
+        <div class="clock">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
         </div>
-         <div class="input-box">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Mật khẩu">
-        </div>
+    </div>
+</div>
 
-        <div class="remember-forgot-box">
-            <label for="remember">
-                <input type="checkbox" id="remember">
-                Ghi nhớ tài khoản
-            </label>
-            <a href="#"> Quên mật khẩu</a>
-        </div>
+<script>
+let hrs = document.getElementById("hrs");
+let min = document.getElementById("min");
+let sec = document.getElementById("sec");
 
-        <button class="login-btn">login</button>
-        <p class="register">
-            khônh tìm thấy tài khoản 
-            <a href="#">đăng kí?</a>
-        </p>
-    </form>
+setInterval(() =>{
+    let currentTime = new Date();
 
-    <script src="script.js"></script>
-    
-</body>
+hrs.innerHTML = (currentTime.getHours() < 10? "0":"") + currentTime.getHours();
+min.innerHTML = (currentTime.getMinutes() < 10? "0":"") + currentTime.getMinutes();
+sec.innerHTML = (currentTime.getSeconds() < 10? "0":"") + currentTime.getSeconds();
+},1000)
+
+</script>
+
 </body>
 </html>
